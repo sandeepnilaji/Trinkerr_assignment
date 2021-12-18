@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+// import ArrowDropDownIcon from "@material-ui/core/ArrowDropDown";
+
 import data from "../data.json";
+// import down from "down-arrow.png";
+import "./SearchBar.css";
 function SearchBar() {
   //   console.log(data);
   const [text, setText] = useState("");
@@ -21,7 +25,7 @@ function SearchBar() {
     }
   };
   return (
-    <div>
+    <div className="show">
       <input type="text" placeholder="Search Stocks..." onInput={Search} />
       <div>
         {list.map((e) => {
@@ -29,10 +33,43 @@ function SearchBar() {
           let per = (((e[1] - e[2]) / e[2]) * 100).toFixed(2);
           return (
             <>
-              <div>{name[0]}</div>
-              <div>{name[1]}</div>
-              <div>{e[1]}</div>
-              <div>{per}</div>
+              <div className="main">
+                <div className="box1">
+                  {" "}
+                  <div
+                    className="text1"
+                    style={
+                      per > 0
+                        ? { color: "rgb(41,197,193)" }
+                        : { color: "rgb(231,89,46)" }
+                    }
+                  >
+                    {name[0]}
+                  </div>
+                  <div className="text2">{name[1]}</div>
+                </div>
+                <div className="box2">
+                  {" "}
+                  <div
+                    className="text3"
+                    style={
+                      per > 0
+                        ? { color: "rgb(41,197,193)" }
+                        : { color: "rgb(231,89,46)" }
+                    }
+                  >
+                    {e[1]}
+                  </div>
+                  <div className="text4">
+                    {per > 0 ? (
+                      <span className="arrow-up"></span>
+                    ) : (
+                      <span className="arrow-down"></span>
+                    )}
+                    {per}%
+                  </div>
+                </div>
+              </div>
             </>
           );
         })}
