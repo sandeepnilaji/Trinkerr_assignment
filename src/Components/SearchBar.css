@@ -1,8 +1,29 @@
 .show {
-  border: 1px solid black;
+  border: 1px solid gray;
   width: 50vw;
   margin: auto;
   min-height: 99vh;
+  border-radius: 4px;
+  position: relative;
+}
+.search_show {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  /* border: 1px solid red; */
+  background-color: white;
+  overflow-y: scroll;
+  max-height: 88vh;
+  /* border: 1px solid red; */
+}
+.search_show::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+}
+.search_show::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 7px;
 }
 input {
   height: 7vh;
@@ -10,6 +31,7 @@ input {
   border: 1px solid gray;
   margin-bottom: 1vh;
   margin-top: 1vh;
+  border-radius: 4px;
 }
 input:focus {
   border-color: 1px solid rgb(86, 179, 255);
@@ -72,9 +94,71 @@ input:focus {
 }
 .show_add {
   display: flex;
+  gap: 3%;
   position: absolute;
   /* flex-direction: row-reverse; */
   right: 0;
   /* justify-content: right; */
   /* text-align: right; */
+  margin-right: 50px;
+}
+.blue_btn {
+  width: 40px;
+  height: 30px;
+  border: none;
+  background-color: rgb(25, 144, 255);
+  color: white;
+  font-weight: bolder;
+  outline: 1px solid black;
+  border-radius: 2px;
+}
+.red_btn {
+  width: 40px;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 77, 79);
+  color: white;
+  font-weight: bolder;
+  outline: 1px solid black;
+  border-radius: 2px;
+}
+.del_btn img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.del_btn {
+  width: 40px;
+  height: 30px;
+  border: none;
+  outline: 1px solid black;
+  border-radius: 2px;
+}
+.add_btn {
+  width: 40px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  outline: 1px solid black;
+  border-radius: 2px;
+}
+.i_btn {
+  width: 40px;
+  height: 30px;
+  border: none;
+  font-weight: bolder;
+  outline: 1px solid black;
+  border-radius: 2px;
+}
+.watch_icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 7px;
+}
+.watch_listname {
+  display: flex;
+  gap: 70%;
+  margin-top: 25px;
 }
