@@ -21,6 +21,7 @@ input:focus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 4%;
+  position: relative;
 }
 .box1 {
   text-align: left;
@@ -40,6 +41,7 @@ input:focus {
 .text3 {
   font-size: 25px;
   font-weight: 600;
+  cursor: pointer;
 }
 .text4 {
   font-size: 18px;
@@ -53,19 +55,26 @@ input:focus {
 /* } */
 
 .arrow-up {
-  width: 0;
+  /* width: 5px; */
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid rgb(46, 198, 194);
 }
 
 .arrow-down {
-  margin-top: 25px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #f00;
+  height: 0px;
+  width: 0px;
+  border: none;
+  border-top: 5px solid rgb(231, 89, 46);
+  border-left: 5px solid rgba(231, 30, 30, 0);
+  border-right: 5px solid rgba(211, 17, 17, 0);
+}
+.show_add {
+  display: flex;
+  position: absolute;
+  /* flex-direction: row-reverse; */
+  right: 0;
+  /* justify-content: right; */
+  /* text-align: right; */
 }
