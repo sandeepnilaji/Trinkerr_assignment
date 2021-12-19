@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
+
 import data from "../data.json";
 import "./SearchBar.css";
 data = data.map((e) => {
@@ -160,9 +163,9 @@ function SearchBar() {
                   {/* <button onClick={() => deleteWatch(el)}>de</button> */}
                   <div className="text4">
                     {per > 0 ? (
-                      <span className="arrow-up"></span>
+                      <ArrowDropUpIcon style={{ color: "rgb(41,197,193)" }} />
                     ) : (
-                      <span className="arrow-down"></span>
+                      <ArrowDropDownIcon style={{ color: "rgb(231,89,46)" }} />
                     )}
                     {per}%
                   </div>
@@ -231,9 +234,9 @@ function SearchBar() {
                   </div>
                   <div className="text4">
                     {per > 0 ? (
-                      <span className="arrow-up"></span>
+                      <ArrowDropUpIcon style={{ color: "rgb(41,197,193)" }} />
                     ) : (
-                      <span className="arrow-down"></span>
+                      <ArrowDropDownIcon style={{ color: "rgb(231,89,46)" }} />
                     )}
                     {per}%
                   </div>
